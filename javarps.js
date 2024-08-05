@@ -16,6 +16,7 @@ let choices = [paper, rock, scissors];
 
 
 
+
 //defining what computer do's
 let randomized = Math.floor(Math.random() * choices.length); 
 let semires = choices[randomized];
@@ -26,7 +27,7 @@ console.log(semires);
 //defining result
 if (answer === paper && semires === rock) 
 {
-    console.log("Congrats");
+    console.log("NICE ONE");
     playerScore = playerScore + 1;
     console.log("Player score = " + playerScore);
 }
@@ -35,7 +36,7 @@ if (answer === paper && semires === rock)
 
 if (answer === paper && semires === scissors)
 {
-    console.log("Booo");
+    console.log(":(");
     computerScore = computerScore +1;
     console.log("Computer score = " + computerScore);
 }
@@ -43,7 +44,7 @@ if (answer === paper && semires === scissors)
 
 if (answer === rock && semires === paper) 
 {
-    console.log("Booo");
+    console.log(":(");
     computerScore = computerScore +1;
     console.log("Computer score = " + computerScore);
 }
@@ -51,7 +52,7 @@ if (answer === rock && semires === paper)
 
 if (answer === rock && semires === scissors) 
 {
-    console.log("Congrats");
+    console.log("NICE ONE");
     playerScore = playerScore + 1;
     console.log("Player score = " + playerScore);
 }
@@ -59,7 +60,7 @@ if (answer === rock && semires === scissors)
 
 if (answer === scissors && semires === rock)
 {
-    console.log("Booo");
+    console.log(":(");
     computerScore = computerScore +1;
     console.log("Computer score = " + computerScore);
 }
@@ -67,7 +68,7 @@ if (answer === scissors && semires === rock)
 
 if (answer === scissors && semires === paper )
 {
-    console.log("Congrats");
+    console.log("NICE ONE");
     playerScore = playerScore + 1;
     console.log("Player score = " + playerScore);
 }
