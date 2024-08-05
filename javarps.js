@@ -17,6 +17,7 @@ let choices = [paper, rock, scissors];
 
 
 
+
 //defining what computer do's
 let randomized = Math.floor(Math.random() * choices.length); 
 let semires = choices[randomized];
@@ -100,10 +101,17 @@ if (answer === scissors && semires === scissors )
 
 
 }
+
+function final (playerScore, computerScore)
+{
 if (playerScore > computerScore) {
-    console.log("YOU WINN!!!");
+    return("YOU WINN!!!");
 }
 else 
 {
-    console.log("BETTER LUCK NEXT TIME BUDDY :D");
+    return("BETTER LUCK NEXT TIME BUDDY :D");
 }
+
+}
+
+alert("The result is " + final(playerScore, computerScore));
