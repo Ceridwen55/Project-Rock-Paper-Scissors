@@ -1,4 +1,6 @@
 //prompting input from player
+let playerScore = 0;
+let computerScore = 0;
 for (i = 0; i < 5; i++)
 {
 let input = prompt("There will be 5 rounds of this game.\nChoose rock, paper, or scissors to play the game, enjoy :)");
@@ -11,7 +13,6 @@ let paper = ("paper");
 let rock = ("rock");
 let scissors = ("scissors");
 let choices = [paper, rock, scissors];
-console.log(choices.includes(answer));
 
 
 
@@ -20,8 +21,7 @@ let randomized = Math.floor(Math.random() * choices.length);
 let semires = choices[randomized];
 console.log(semires);
 
-let playerScore = 0;
-let computerScore = 0;
+
 
 //defining result
 if (answer === paper && semires === rock) 
@@ -96,22 +96,13 @@ if (answer === scissors && semires === scissors )
         computerScore = computerScore + 0;
 }
 
-//champion
 
-do 
-{
-    console.log("YOU WIN!!!!!");
+
 }
-while (playerScore > computerScore);
-
-do 
+if (playerScore > computerScore) {
+    console.log("YOU WINN!!!");
+}
+else 
 {
     console.log("BETTER LUCK NEXT TIME BUDDY :D");
-}
-while (computerScore > playerScore);
-
-
-
-
-
 }
