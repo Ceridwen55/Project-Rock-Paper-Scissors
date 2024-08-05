@@ -20,59 +20,98 @@ let randomized = Math.floor(Math.random() * choices.length);
 let semires = choices[randomized];
 console.log(semires);
 
+let playerScore = 0;
+let computerScore = 0;
+
 //defining result
 if (answer === paper && semires === rock) 
 {
     console.log("Congrats");
-} 
-else if (answer === paper && semires === scissors)
+    playerScore = playerScore + 1;
+    console.log("Player score = " + playerScore);
+}
+
+
+
+if (answer === paper && semires === scissors)
 {
     console.log("Booo");
+    computerScore = computerScore +1;
+    console.log("Computer score = " + computerScore);
 }
-else if (answer === rock && semires === paper) 
+
+
+if (answer === rock && semires === paper) 
 {
     console.log("Booo");
+    computerScore = computerScore +1;
+    console.log("Computer score = " + computerScore);
 }
-else if (answer === rock && semires === scissors) 
+
+
+if (answer === rock && semires === scissors) 
 {
     console.log("Congrats");
+    playerScore = playerScore + 1;
+    console.log("Player score = " + playerScore);
 }
-else if (answer === scissors && semires === rock)
+
+
+if (answer === scissors && semires === rock)
 {
     console.log("Booo");
+    computerScore = computerScore +1;
+    console.log("Computer score = " + computerScore);
 }
-else if (answer === scissors && semires === paper )
+
+
+if (answer === scissors && semires === paper )
 {
     console.log("Congrats");
+    playerScore = playerScore + 1;
+    console.log("Player score = " + playerScore);
 }
-else if (answer === rock && semires === rock )
+
+
+if (answer === rock && semires === rock )
 {
-        console.log("Try again");
+        console.log("DRAW!!");
+        playerScore = playerScore + 0;
+        computerScore = computerScore + 0;
 }
-else if (answer === paper && semires === paper )
+
+
+if (answer === paper && semires === paper )
 {
-        console.log("Try again");
+        console.log("DRAW!!");
+        playerScore = playerScore + 0;
+        computerScore = computerScore + 0;
 }
-else if (answer === scissors && semires === scissors )
+
+
+if (answer === scissors && semires === scissors )
 {
-        console.log("Try again");
+        console.log("DRAW!!");
+        playerScore = playerScore + 0;
+        computerScore = computerScore + 0;
 }
 
-//scoring
-let pl = answer === true;
-let co = answer === false;
+//champion
 
-function playerScore (pl)
-{       let pl = 0;
-        return pl++
+do 
+{
+    console.log("YOU WIN!!!!!");
 }
+while (playerScore > computerScore);
 
-console.log(playerScore);
-
-function computerScore (co)
-{       let co = 0;
-        return co++
+do 
+{
+    console.log("BETTER LUCK NEXT TIME BUDDY :D");
 }
-console.log(computerScore);
+while (computerScore > playerScore);
+
+
+
+
 
 }
